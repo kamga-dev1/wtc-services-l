@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Solutions | WTC Services - Résidentiel, Commercial, Industriel</title>
-    <meta name="description" content="Découvrez nos architectures de sécurité adaptées par secteur : protection résidentielle de villas, gestion de bureaux et commerces, et sécurité lourde industrielle.">
+    <meta name="description"
+        content="Découvrez nos architectures de sécurité adaptées par secteur : protection résidentielle de villas, gestion de bureaux et commerces, et sécurité lourde industrielle.">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .solution-section {
             padding: 6rem 0;
             border-bottom: 1px solid var(--light-border);
         }
+
         .solution-section:nth-child(even) {
             background-color: var(--light-bg);
         }
+
         .solution-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-        .solution-grid.reverse > div:first-child {
+
+        .solution-grid.reverse>div:first-child {
             order: 2;
         }
+
         .solutions-list {
             margin: 1.5rem 0 2rem;
         }
+
         .solutions-list-item {
             margin-bottom: 1rem;
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
         }
+
         .solutions-list-icon {
             color: var(--primary);
             font-weight: bold;
             margin-top: 0.2rem;
         }
+
         .solution-img-wrapper {
             position: relative;
             background: #141414;
@@ -44,17 +53,22 @@
             overflow: hidden;
             box-shadow: var(--shadow-md);
         }
+
         @media (max-width: 768px) {
-            .solution-grid, .solution-grid.reverse {
+
+            .solution-grid,
+            .solution-grid.reverse {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
-            .solution-grid.reverse > div:first-child {
+
+            .solution-grid.reverse>div:first-child {
                 order: 0;
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER / NAVIGATION -->
@@ -65,18 +79,22 @@
                     <img src="assets/images/logo-dark.png" alt="WTC Services Logo" class="logo-img">
                 </a>
             </div>
-            
+
             <button class="menu-toggle" id="menuToggle" aria-label="Menu principal">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <nav class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="a-propos.html" class="nav-link">À propos</a>
                 <div class="nav-item-dropdown">
-                    <a href="services.html" class="nav-link dropdown-toggle">Services <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="services.html" class="nav-link dropdown-toggle">Services <svg width="10" height="6"
+                            viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></a>
                     <div class="dropdown-menu">
                         <a href="services.html#videosurveillance" class="dropdown-item">Vidéosurveillance</a>
                         <a href="services.html#alarmes" class="dropdown-item">Alarmes intrusion</a>
@@ -89,10 +107,14 @@
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            
+
             <div class="header-btn">
                 <a href="tel:655852060" class="btn btn-phone">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
                     655 852 060
                 </a>
             </div>
@@ -117,33 +139,39 @@
             <div class="solution-grid">
                 <div>
                     <span class="section-tag">Pour les Particuliers</span>
-                    <h2 class="section-title" style="font-size: 2rem;">Sécurité Résidentielle : Protégez votre foyer</h2>
+                    <h2 class="section-title" style="font-size: 2rem;">Sécurité Résidentielle : Protégez votre foyer
+                    </h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        Votre maison est votre havre de paix. Pour la préserver, WTC Services conçoit des architectures discrètes et performantes adaptées aux configurations des villas et appartements.
+                        Votre maison est votre havre de paix. Pour la préserver, WTC Services conçoit des architectures
+                        discrètes et performantes adaptées aux configurations des villas et appartements.
                     </p>
                     <div class="solutions-list">
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Dissuasion Périphérique</strong> : Barrières infrarouges de jardin et caméras extérieures qui détectent l'intrus avant même qu'il ne s'approche de vos portes ou fenêtres.
+                                <strong>Dissuasion Périphérique</strong> : Barrières infrarouges de jardin et caméras
+                                extérieures qui détectent l'intrus avant même qu'il ne s'approche de vos portes ou
+                                fenêtres.
                             </div>
                         </div>
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Domotique & Confort</strong> : Visionnez le flux des caméras et armez/désarmez votre système à distance via notre application mobile ergonomique.
+                                <strong>Domotique & Confort</strong> : Visionnez le flux des caméras et armez/désarmez
+                                votre système à distance via notre application mobile ergonomique.
                             </div>
                         </div>
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Interphonie Vidéo Connectée</strong> : Répondez aux visiteurs qui sonnent chez vous directement depuis votre téléphone, même lorsque vous êtes absent.
+                                <strong>Interphonie Vidéo Connectée</strong> : Répondez aux visiteurs qui sonnent chez
+                                vous directement depuis votre téléphone, même lorsque vous êtes absent.
                             </div>
                         </div>
                     </div>
                     <a href="#" class="btn btn-primary devis-modal-trigger">Sécuriser ma villa</a>
                 </div>
-                
+
                 <div class="solution-img-wrapper">
                     <!-- Pure styled SVG illustration of a modern house mockup -->
                     <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
@@ -154,34 +182,36 @@
                                 <stop offset="100%" stop-color="#1e293b" />
                             </linearGradient>
                         </defs>
-                        <rect width="400" height="300" fill="url(#skyGrad)"/>
-                        
+                        <rect width="400" height="300" fill="url(#skyGrad)" />
+
                         <!-- Ground / Lawn -->
-                        <rect x="0" y="220" width="400" height="80" fill="#065f46"/>
-                        
+                        <rect x="0" y="220" width="400" height="80" fill="#065f46" />
+
                         <!-- Modern House base -->
-                        <rect x="80" y="100" width="240" height="120" fill="#e2e8f0" rx="4"/>
+                        <rect x="80" y="100" width="240" height="120" fill="#e2e8f0" rx="4" />
                         <!-- Second floor projection -->
-                        <rect x="60" y="60" width="160" height="70" fill="#1e293b" rx="2"/>
-                        
+                        <rect x="60" y="60" width="160" height="70" fill="#1e293b" rx="2" />
+
                         <!-- Roof/Trim -->
-                        <rect x="50" y="50" width="180" height="10" fill="#c9121f"/>
-                        
+                        <rect x="50" y="50" width="180" height="10" fill="#c9121f" />
+
                         <!-- Big glass window with interior light -->
-                        <rect x="90" y="140" width="100" height="80" fill="#fef08a" opacity="0.8"/>
-                        <line x1="140" y1="140" x2="140" y2="220" stroke="#475569" stroke-width="3"/>
-                        
+                        <rect x="90" y="140" width="100" height="80" fill="#fef08a" opacity="0.8" />
+                        <line x1="140" y1="140" x2="140" y2="220" stroke="#475569" stroke-width="3" />
+
                         <!-- Door -->
-                        <rect x="230" y="140" width="50" height="80" fill="#78350f"/>
-                        <circle cx="240" cy="180" r="4" fill="#fbbf24"/>
-                        
+                        <rect x="230" y="140" width="50" height="80" fill="#78350f" />
+                        <circle cx="240" cy="180" r="4" fill="#fbbf24" />
+
                         <!-- Security Camera overlay (glowing) -->
-                        <circle cx="70" cy="80" r="6" fill="#ef4444" opacity="0.8"/>
-                        <line x1="70" y1="80" x2="55" y2="95" stroke="#ef4444" stroke-width="3"/>
-                        
+                        <circle cx="70" cy="80" r="6" fill="#ef4444" opacity="0.8" />
+                        <line x1="70" y1="80" x2="55" y2="95" stroke="#ef4444" stroke-width="3" />
+
                         <!-- Wi-Fi wave rings in sky -->
-                        <circle cx="200" cy="150" r="120" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="8,10" opacity="0.3"/>
-                        <circle cx="200" cy="150" r="160" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="10,15" opacity="0.2"/>
+                        <circle cx="200" cy="150" r="120" fill="none" stroke="#10b981" stroke-width="2"
+                            stroke-dasharray="8,10" opacity="0.3" />
+                        <circle cx="200" cy="150" r="160" fill="none" stroke="#10b981" stroke-width="1.5"
+                            stroke-dasharray="10,15" opacity="0.2" />
                     </svg>
                 </div>
             </div>
@@ -196,65 +226,71 @@
                     <span class="section-tag">Pour les Entreprises</span>
                     <h2 class="section-title" style="font-size: 2rem;">Bureaux & Commerces : Contrôlez et optimisez</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        La protection des collaborateurs, des données confidentielles et des encaissements est cruciale. WTC Services fournit aux PME, banques et commerces de détail des architectures intégrées.
+                        La protection des collaborateurs, des données confidentielles et des encaissements est cruciale.
+                        WTC Services fournit aux PME, banques et commerces de détail des architectures intégrées.
                     </p>
                     <div class="solutions-list">
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Contrôle d'Accès Intuitif</strong> : Gestion des badges employés par puces RFID ou smartphones pour restreindre l'accès aux salles de serveurs ou archives.
+                                <strong>Contrôle d'Accès Intuitif</strong> : Gestion des badges employés par puces RFID
+                                ou smartphones pour restreindre l'accès aux salles de serveurs ou archives.
                             </div>
                         </div>
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Vidéosurveillance Anti-Démarque</strong> : Caméras très haute définition discrètes au-dessus des caisses et rayonnages pour décourager les vols et valider les transactions.
+                                <strong>Vidéosurveillance Anti-Démarque</strong> : Caméras très haute définition
+                                discrètes au-dessus des caisses et rayonnages pour décourager les vols et valider les
+                                transactions.
                             </div>
                         </div>
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Intégration RH</strong> : Exportez les heures de pointage enregistrées par les lecteurs de badges pour faciliter le traitement des fiches de paie.
+                                <strong>Intégration RH</strong> : Exportez les heures de pointage enregistrées par les
+                                lecteurs de badges pour faciliter le traitement des fiches de paie.
                             </div>
                         </div>
                     </div>
                     <a href="#" class="btn btn-primary devis-modal-trigger">Sécuriser mes bureaux</a>
                 </div>
-                
+
                 <div class="solution-img-wrapper">
                     <!-- Pure styled SVG illustration of office tower and check mark -->
                     <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                        <rect width="400" height="300" fill="#0f172a"/>
-                        
+                        <rect width="400" height="300" fill="#0f172a" />
+
                         <!-- Office Towers Silhouette -->
-                        <rect x="60" y="80" width="100" height="220" fill="#1e293b"/>
-                        <rect x="180" y="40" width="130" height="260" fill="#334155"/>
-                        
+                        <rect x="60" y="80" width="100" height="220" fill="#1e293b" />
+                        <rect x="180" y="40" width="130" height="260" fill="#334155" />
+
                         <!-- Glowing Windows -->
                         <!-- Tower 1 Windows -->
-                        <rect x="75" y="100" width="15" height="15" fill="#38bdf8" opacity="0.9"/>
-                        <rect x="105" y="100" width="15" height="15" fill="#fef08a" opacity="0.8"/>
-                        <rect x="75" y="130" width="15" height="15" fill="#fef08a" opacity="0.6"/>
-                        <rect x="105" y="130" width="15" height="15" fill="#38bdf8" opacity="0.4"/>
-                        <rect x="75" y="160" width="15" height="15" fill="#38bdf8" opacity="0.8"/>
-                        <rect x="105" y="160" width="15" height="15" fill="#fef08a" opacity="0.9"/>
-                        
+                        <rect x="75" y="100" width="15" height="15" fill="#38bdf8" opacity="0.9" />
+                        <rect x="105" y="100" width="15" height="15" fill="#fef08a" opacity="0.8" />
+                        <rect x="75" y="130" width="15" height="15" fill="#fef08a" opacity="0.6" />
+                        <rect x="105" y="130" width="15" height="15" fill="#38bdf8" opacity="0.4" />
+                        <rect x="75" y="160" width="15" height="15" fill="#38bdf8" opacity="0.8" />
+                        <rect x="105" y="160" width="15" height="15" fill="#fef08a" opacity="0.9" />
+
                         <!-- Tower 2 Windows -->
-                        <rect x="200" y="60" width="20" height="20" fill="#fef08a" opacity="0.8"/>
-                        <rect x="235" y="60" width="20" height="20" fill="#38bdf8" opacity="0.7"/>
-                        <rect x="270" y="60" width="20" height="20" fill="#38bdf8" opacity="0.3"/>
-                        <rect x="200" y="100" width="20" height="20" fill="#38bdf8" opacity="0.5"/>
-                        <rect x="235" y="100" width="20" height="20" fill="#fef08a" opacity="0.9"/>
-                        <rect x="270" y="100" width="20" height="20" fill="#38bdf8" opacity="0.6"/>
-                        <rect x="200" y="140" width="20" height="20" fill="#fef08a" opacity="0.8"/>
-                        <rect x="235" y="140" width="20" height="20" fill="#38bdf8" opacity="0.4"/>
-                        <rect x="270" y="140" width="20" height="20" fill="#fef08a" opacity="0.7"/>
-                        
+                        <rect x="200" y="60" width="20" height="20" fill="#fef08a" opacity="0.8" />
+                        <rect x="235" y="60" width="20" height="20" fill="#38bdf8" opacity="0.7" />
+                        <rect x="270" y="60" width="20" height="20" fill="#38bdf8" opacity="0.3" />
+                        <rect x="200" y="100" width="20" height="20" fill="#38bdf8" opacity="0.5" />
+                        <rect x="235" y="100" width="20" height="20" fill="#fef08a" opacity="0.9" />
+                        <rect x="270" y="100" width="20" height="20" fill="#38bdf8" opacity="0.6" />
+                        <rect x="200" y="140" width="20" height="20" fill="#fef08a" opacity="0.8" />
+                        <rect x="235" y="140" width="20" height="20" fill="#38bdf8" opacity="0.4" />
+                        <rect x="270" y="140" width="20" height="20" fill="#fef08a" opacity="0.7" />
+
                         <!-- Digital Lock Overlay Graphic -->
-                        <circle cx="200" cy="220" r="50" fill="none" stroke="#10b981" stroke-width="4"/>
-                        <circle cx="200" cy="220" r="40" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+                        <circle cx="200" cy="220" r="50" fill="none" stroke="#10b981" stroke-width="4" />
+                        <circle cx="200" cy="220" r="40" fill="#0f172a" stroke="#10b981" stroke-width="2" />
                         <!-- Checkmark inside -->
-                        <path d="M 185 220 L 195 230 L 220 205" fill="none" stroke="#10b981" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 185 220 L 195 230 L 220 205" fill="none" stroke="#10b981" stroke-width="6"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
             </div>
@@ -267,56 +303,65 @@
             <div class="solution-grid">
                 <div>
                     <span class="section-tag">Pour l'Industrie</span>
-                    <h2 class="section-title" style="font-size: 2rem;">Chantiers & Usines : Sécurité et surveillance lourde</h2>
+                    <h2 class="section-title" style="font-size: 2rem;">Chantiers & Usines : Sécurité et surveillance
+                        lourde</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        Les sites industriels et logistiques présentent des défis complexes : surfaces étendues, matières de valeur stockées à l'extérieur, accès de camions fréquents.
+                        Les sites industriels et logistiques présentent des défis complexes : surfaces étendues,
+                        matières de valeur stockées à l'extérieur, accès de camions fréquents.
                     </p>
                     <div class="solutions-list">
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Lecture Automatique de Plaques (LAPI)</strong> : Enregistrez et contrôlez automatiquement l'accès des véhicules et camions de livraison sur le site.
+                                <strong>Lecture Automatique de Plaques (LAPI)</strong> : Enregistrez et contrôlez
+                                automatiquement l'accès des véhicules et camions de livraison sur le site.
                             </div>
                         </div>
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Caméras Thermiques & Anti-Déflagration</strong> : Détectez les points chauds pour prévenir les départs d'incendies et assurez la surveillance de nuit sur des distances de plus de 500m.
+                                <strong>Caméras Thermiques & Anti-Déflagration</strong> : Détectez les points chauds
+                                pour prévenir les départs d'incendies et assurez la surveillance de nuit sur des
+                                distances de plus de 500m.
                             </div>
                         </div>
                         <div class="solutions-list-item">
                             <span class="solutions-list-icon">▪</span>
                             <div>
-                                <strong>Chantier Connecté 4G/5G</strong> : Déployez des mâts de caméra solaires mobiles et autonomes pour sécuriser vos chantiers contre le vol de métaux et engins.
+                                <strong>Chantier Connecté 4G/5G</strong> : Déployez des mâts de caméra solaires mobiles
+                                et autonomes pour sécuriser vos chantiers contre le vol de métaux et engins.
                             </div>
                         </div>
                     </div>
                     <a href="#" class="btn btn-primary devis-modal-trigger">Sécuriser mon site industriel</a>
                 </div>
-                
+
                 <div class="solution-img-wrapper">
                     <!-- Pure styled SVG illustration of factory chimney / thermal camera view -->
                     <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                        <rect width="400" height="300" fill="#0f172a"/>
-                        
+                        <rect width="400" height="300" fill="#0f172a" />
+
                         <!-- Factory Outline in background -->
-                        <path d="M 40 250 L 40 180 L 100 180 L 140 140 L 140 250 Z" fill="#1e293b"/>
-                        <path d="M 140 250 L 140 150 L 200 150 L 240 110 L 240 250 Z" fill="#334155"/>
-                        <rect x="260" y="80" width="40" height="170" fill="#475569"/>
+                        <path d="M 40 250 L 40 180 L 100 180 L 140 140 L 140 250 Z" fill="#1e293b" />
+                        <path d="M 140 250 L 140 150 L 200 150 L 240 110 L 240 250 Z" fill="#334155" />
+                        <rect x="260" y="80" width="40" height="170" fill="#475569" />
                         <!-- smoke lines -->
-                        <path d="M 280 80 Q 285 50, 310 40 T 330 20" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
-                        
+                        <path d="M 280 80 Q 285 50, 310 40 T 330 20" fill="none" stroke="#64748b" stroke-width="4"
+                            stroke-linecap="round" />
+
                         <!-- Thermal Camera Heat Overlay Effect (simulating visual thermal graphic) -->
-                        <circle cx="110" cy="180" r="30" fill="#c9121f" opacity="0.3"/>
-                        <circle cx="110" cy="180" r="15" fill="#f59e0b" opacity="0.5"/>
-                        <circle cx="110" cy="180" r="5" fill="#ffffff" opacity="0.8"/>
-                        
+                        <circle cx="110" cy="180" r="30" fill="#c9121f" opacity="0.3" />
+                        <circle cx="110" cy="180" r="15" fill="#f59e0b" opacity="0.5" />
+                        <circle cx="110" cy="180" r="5" fill="#ffffff" opacity="0.8" />
+
                         <!-- Target crosshair overlay representing thermal camera targeting -->
-                        <circle cx="200" cy="150" r="60" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5"/>
-                        <line x1="130" y1="150" x2="270" y2="150" stroke="#ef4444" stroke-width="1.5"/>
-                        <line x1="200" y1="80" x2="200" y2="220" stroke="#ef4444" stroke-width="1.5"/>
+                        <circle cx="200" cy="150" r="60" fill="none" stroke="#ef4444" stroke-width="2"
+                            stroke-dasharray="5,5" />
+                        <line x1="130" y1="150" x2="270" y2="150" stroke="#ef4444" stroke-width="1.5" />
+                        <line x1="200" y1="80" x2="200" y2="220" stroke="#ef4444" stroke-width="1.5" />
                         <!-- Distance scale text -->
-                        <text x="210" y="105" font-family="'Courier New', monospace" font-size="12" fill="#ef4444" font-weight="bold">TARGET LOCK: 420m</text>
+                        <text x="210" y="105" font-family="'Courier New', monospace" font-size="12" fill="#ef4444"
+                            font-weight="bold">TARGET LOCK: 420m</text>
                     </svg>
                 </div>
             </div>
@@ -328,20 +373,35 @@
         <div class="container footer-grid">
             <div class="footer-col-about">
                 <img src="assets/images/logo-light.png" alt="WTC Services Logo" class="logo-img">
-                <p class="footer-about-text">WTC Services est une entreprise spécialisée dans les solutions de sécurité électronique. Nous accompagnons les entreprises et les particuliers avec des systèmes fiables, innovants et adaptés à leurs besoins.</p>
+                <p class="footer-about-text">WTC Services est une entreprise spécialisée dans les solutions de sécurité
+                    électronique. Nous accompagnons les entreprises et les particuliers avec des systèmes fiables,
+                    innovants et adaptés à leurs besoins.</p>
                 <div class="social-links">
                     <a href="https://facebook.com" class="social-link" target="_blank" aria-label="Facebook">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
                     </a>
                     <a href="https://linkedin.com" class="social-link" target="_blank" aria-label="LinkedIn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
                     </a>
                     <a href="https://instagram.com" class="social-link" target="_blank" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
                     </a>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="footer-title">Navigation</h4>
                 <ul class="footer-links">
@@ -354,7 +414,7 @@
                     <li><a href="contact.html" class="footer-link">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div>
                 <h4 class="footer-title">Nos services</h4>
                 <ul class="footer-links">
@@ -365,27 +425,39 @@
                     <li><a href="solutions.html" class="footer-link">Solutions sur mesure</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-col-contact">
                 <h4 class="footer-title">Contact</h4>
                 <ul class="contact-info-list">
                     <li class="contact-info-item">
-                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
                         <span>655 852 060</span>
                     </li>
                     <li class="contact-info-item">
-                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span>raoul.ntonga@wtc-services.com</span>
+                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span>info@wtc-services.com</span>
                     </li>
                     <li class="contact-info-item">
-                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
                         <span>Douala, Cameroun</span>
                     </li>
                 </ul>
                 <a href="#" class="footer-devis-link devis-modal-trigger">Demander un devis &rarr;</a>
             </div>
         </div>
-        
+
         <div class="container footer-bottom">
             <div>
                 &copy; 2025 WTC Services. Tous droits réservés.
@@ -403,7 +475,7 @@
             <button class="modal-close" id="modalClose" aria-label="Fermer la boîte de dialogue">&times;</button>
             <h3 class="modal-title">Demande de devis</h3>
             <p class="modal-desc">Obtenez une étude personnalisée et gratuite pour la sécurisation de vos locaux.</p>
-            
+
             <form id="devisForm">
                 <div class="form-row">
                     <div class="form-group">
@@ -415,18 +487,19 @@
                         <input class="form-control" type="text" id="devisEntreprise" placeholder="Ex: WTC SARL">
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label class="form-label" for="devisEmail">Email *</label>
-                        <input class="form-control" type="email" id="devisEmail" required placeholder="Ex: jean.dupont@mail.com">
+                        <input class="form-control" type="email" id="devisEmail" required
+                            placeholder="Ex: jean.dupont@mail.com">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="devisTel">Téléphone *</label>
                         <input class="form-control" type="tel" id="devisTel" required placeholder="Ex: 655 852 060">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="devisService">Service principal souhaité *</label>
                     <select class="form-control" id="devisService" required>
@@ -438,13 +511,15 @@
                         <option value="complet">Solution complète de sécurité</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="devisMsg">Description du projet (besoins, type de local...) *</label>
-                    <textarea class="form-control" id="devisMsg" rows="4" required placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
+                    <textarea class="form-control" id="devisMsg" rows="4" required
+                        placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
                 </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer la demande de devis</button>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer la demande
+                    de devis</button>
             </form>
         </div>
     </div>
@@ -452,4 +527,5 @@
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

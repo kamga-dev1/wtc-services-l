@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Services | WTC Services - Vidéosurveillance, Alarme, Contrôle d'accès</title>
-    <meta name="description" content="Découvrez nos prestations de sécurité : caméras de surveillance, systèmes d'alarme sans-fil ou filaire, terminaux de contrôle d'accès et contrats de maintenance.">
+    <meta name="description"
+        content="Découvrez nos prestations de sécurité : caméras de surveillance, systèmes d'alarme sans-fil ou filaire, terminaux de contrôle d'accès et contrats de maintenance.">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .service-detail-section {
             padding: 6rem 0;
             border-bottom: 1px solid var(--light-border);
         }
+
         .service-detail-section:nth-child(even) {
             background-color: var(--light-bg);
         }
+
         .service-detail-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
+
         .service-detail-grid.reverse {
             grid-template-columns: 1fr 1fr;
         }
-        .service-detail-grid.reverse > div:first-child {
+
+        .service-detail-grid.reverse>div:first-child {
             order: 2;
         }
+
         .feature-list {
             margin: 1.5rem 0 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
+
         .feature-list-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             font-size: 0.95rem;
         }
+
         .feature-list-icon {
             color: var(--primary);
             flex-shrink: 0;
         }
+
         .service-detail-img {
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-md);
         }
+
         @media (max-width: 768px) {
-            .service-detail-grid, .service-detail-grid.reverse {
+
+            .service-detail-grid,
+            .service-detail-grid.reverse {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
-            .service-detail-grid.reverse > div:first-child {
+
+            .service-detail-grid.reverse>div:first-child {
                 order: 0;
             }
+
             .feature-list {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER / NAVIGATION -->
@@ -70,18 +86,22 @@
                     <img src="assets/images/logo-dark.png" alt="WTC Services Logo" class="logo-img">
                 </a>
             </div>
-            
+
             <button class="menu-toggle" id="menuToggle" aria-label="Menu principal">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <nav class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="a-propos.html" class="nav-link">À propos</a>
                 <div class="nav-item-dropdown">
-                    <a href="services.html" class="nav-link dropdown-toggle active">Services <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="services.html" class="nav-link dropdown-toggle active">Services <svg width="10" height="6"
+                            viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></a>
                     <div class="dropdown-menu">
                         <a href="services.html#videosurveillance" class="dropdown-item">Vidéosurveillance</a>
                         <a href="services.html#alarmes" class="dropdown-item">Alarmes intrusion</a>
@@ -94,10 +114,14 @@
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            
+
             <div class="header-btn">
                 <a href="tel:655852060" class="btn btn-phone">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
                     655 852 060
                 </a>
             </div>
@@ -124,15 +148,19 @@
                     <span class="section-tag">Notre expertise</span>
                     <h2 class="section-title">Des solutions professionnelles pour sécuriser vos actifs</h2>
                     <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
-                        WTC Services conçoit et déploie des systèmes de sécurité haut de gamme basés sur les dernières avancées technologiques. Chaque solution est calibrée précisément après une étude approfondie de vos locaux.
+                        WTC Services conçoit et déploie des systèmes de sécurité haut de gamme basés sur les dernières
+                        avancées technologiques. Chaque solution est calibrée précisément après une étude approfondie de
+                        vos locaux.
                     </p>
                     <p style="margin-bottom: 2rem; color: var(--text-muted);">
-                        Que vous soyez un particulier souhaitant protéger sa résidence secondaire ou un directeur industriel devant sécuriser des zones critiques, nous avons l'expertise nécessaire.
+                        Que vous soyez un particulier souhaitant protéger sa résidence secondaire ou un directeur
+                        industriel devant sécuriser des zones critiques, nous avons l'expertise nécessaire.
                     </p>
                     <a href="#" class="btn btn-primary devis-modal-trigger">Obtenir une étude gratuite</a>
                 </div>
                 <div>
-                    <img src="assets/images/security_dashboard.png" alt="Centre de contrôle de sécurité moderne" class="service-detail-img" style="width: 100%;">
+                    <img src="assets/images/security_dashboard.png" alt="Centre de contrôle de sécurité moderne"
+                        class="service-detail-img" style="width: 100%;">
                 </div>
             </div>
         </div>
@@ -146,36 +174,56 @@
                     <span class="section-tag">01. Surveillance Visuelle</span>
                     <h2 class="section-title">Vidéosurveillance IP & Ultra HD</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        Gardez un œil sur vos locaux où que vous soyez. Nous installons des systèmes de caméras IP haut de gamme capables de diffuser en temps réel sur smartphone, tablette ou ordinateur sécurisé.
+                        Gardez un œil sur vos locaux où que vous soyez. Nous installons des systèmes de caméras IP haut
+                        de gamme capables de diffuser en temps réel sur smartphone, tablette ou ordinateur sécurisé.
                     </p>
                     <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                        Grâce à la détection de mouvement assistée par intelligence artificielle, vous réduisez les fausses alertes (animaux, intempéries) et êtes immédiatement averti en cas de franchissement suspect de périmètre.
+                        Grâce à la détection de mouvement assistée par intelligence artificielle, vous réduisez les
+                        fausses alertes (animaux, intempéries) et êtes immédiatement averti en cas de franchissement
+                        suspect de périmètre.
                     </p>
-                    
+
                     <div class="feature-list">
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Caméras de résolution 4K (8MP)</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Vision nocturne infrarouge / thermique</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Reconnaissance faciale et de plaques</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Stockage cloud sécurisé et NVR local</span>
                         </div>
                     </div>
-                    
+
                     <a href="#" class="btn btn-primary devis-modal-trigger">Étudier mon projet de vidéosurveillance</a>
                 </div>
                 <div>
                     <!-- Pure styled SVG illustration of a bullet security camera -->
-                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img" style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img"
+                        style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
                         <defs>
                             <linearGradient id="camGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#38bdf8" />
@@ -187,27 +235,36 @@
                             </filter>
                         </defs>
                         <!-- Grid Background -->
-                        <path d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        <path d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        
+                        <path
+                            d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+                        <path
+                            d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+
                         <!-- Camera Stand / Mount -->
-                        <path d="M 80 180 C 80 120, 150 120, 150 150 L 150 185" fill="none" stroke="#94a3b8" stroke-width="24" stroke-linecap="round"/>
-                        <path d="M 60 180 L 100 180" fill="none" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
-                        
+                        <path d="M 80 180 C 80 120, 150 120, 150 150 L 150 185" fill="none" stroke="#94a3b8"
+                            stroke-width="24" stroke-linecap="round" />
+                        <path d="M 60 180 L 100 180" fill="none" stroke="#475569" stroke-width="12"
+                            stroke-linecap="round" />
+
                         <!-- Camera Body -->
-                        <rect x="130" y="100" width="180" height="70" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="4"/>
-                        <path d="M 280 100 L 310 90 L 310 180 L 280 170 Z" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
-                        
+                        <rect x="130" y="100" width="180" height="70" rx="10" fill="#e2e8f0" stroke="#475569"
+                            stroke-width="4" />
+                        <path d="M 280 100 L 310 90 L 310 180 L 280 170 Z" fill="#cbd5e1" stroke="#475569"
+                            stroke-width="4" />
+
                         <!-- Camera Lens Ring -->
-                        <ellipse cx="310" cy="135" rx="12" ry="35" fill="#1e293b"/>
-                        <ellipse cx="310" cy="135" rx="5" ry="20" fill="url(#camGrad)" filter="url(#glow)"/>
-                        
+                        <ellipse cx="310" cy="135" rx="12" ry="35" fill="#1e293b" />
+                        <ellipse cx="310" cy="135" rx="5" ry="20" fill="url(#camGrad)" filter="url(#glow)" />
+
                         <!-- Antenna -->
-                        <line x1="150" y1="100" x2="110" y2="50" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
-                        <circle cx="110" cy="50" r="8" fill="#c9121f"/>
-                        
+                        <line x1="150" y1="100" x2="110" y2="50" stroke="#475569" stroke-width="8"
+                            stroke-linecap="round" />
+                        <circle cx="110" cy="50" r="8" fill="#c9121f" />
+
                         <!-- Glowing Status LED -->
-                        <circle cx="280" cy="115" r="4" fill="#ef4444" filter="url(#glow)"/>
+                        <circle cx="280" cy="115" r="4" fill="#ef4444" filter="url(#glow)" />
                     </svg>
                 </div>
             </div>
@@ -222,36 +279,57 @@
                     <span class="section-tag">02. Dissuasion Active</span>
                     <h2 class="section-title">Systèmes d'Alarme Anti-Intrusion</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        La meilleure protection est celle qui prévient le crime. Nos systèmes d'alarme intègrent des détecteurs volumétriques et périmétriques ultra-sensibles capables de capter tout mouvement ou bris de verre suspect.
+                        La meilleure protection est celle qui prévient le crime. Nos systèmes d'alarme intègrent des
+                        détecteurs volumétriques et périmétriques ultra-sensibles capables de capter tout mouvement ou
+                        bris de verre suspect.
                     </p>
                     <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                        Reliés à des sirènes puissantes de plus de 110 dB et équipés de transmetteurs GSM/IP, ils garantissent l'envoi d'alertes instantanées sur votre téléphone ou vers une station de télésurveillance, même en cas de coupure d'électricité.
+                        Reliés à des sirènes puissantes de plus de 110 dB et équipés de transmetteurs GSM/IP, ils
+                        garantissent l'envoi d'alertes instantanées sur votre téléphone ou vers une station de
+                        télésurveillance, même en cas de coupure d'électricité.
                     </p>
-                    
+
                     <div class="feature-list">
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Centrales d'alarmes connectées (Wifi/GSM)</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Détecteurs de mouvement spécial animaux</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Barrières infrarouges de jardin</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Télécommandes de détresse / Boutons SOS</span>
                         </div>
                     </div>
-                    
+
                     <a href="#" class="btn btn-primary devis-modal-trigger">Configurer mon système d'alarme</a>
                 </div>
                 <div>
                     <!-- Pure styled SVG illustration of a security shield/alarm device -->
-                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img" style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img"
+                        style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
                         <defs>
                             <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
                                 <feGaussianBlur stdDeviation="8" result="blur" />
@@ -259,20 +337,30 @@
                             </filter>
                         </defs>
                         <!-- Grid Background -->
-                        <path d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        <path d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        
+                        <path
+                            d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+                        <path
+                            d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+
                         <!-- Outer Shield -->
-                        <path d="M 200 40 L 290 80 L 290 180 C 290 230, 200 270, 200 270 C 200 270, 110 230, 110 180 L 110 80 Z" fill="none" stroke="#c9121f" stroke-width="12" stroke-linejoin="round" filter="url(#redGlow)"/>
-                        
+                        <path
+                            d="M 200 40 L 290 80 L 290 180 C 290 230, 200 270, 200 270 C 200 270, 110 230, 110 180 L 110 80 Z"
+                            fill="none" stroke="#c9121f" stroke-width="12" stroke-linejoin="round"
+                            filter="url(#redGlow)" />
+
                         <!-- Inner Shield -->
-                        <path d="M 200 65 L 265 95 L 265 175 C 265 210, 200 240, 200 240 C 200 240, 135 210, 135 175 L 135 95 Z" fill="#1e293b" stroke="#e2e8f0" stroke-width="4" stroke-linejoin="round"/>
-                        
+                        <path
+                            d="M 200 65 L 265 95 L 265 175 C 265 210, 200 240, 200 240 C 200 240, 135 210, 135 175 L 135 95 Z"
+                            fill="#1e293b" stroke="#e2e8f0" stroke-width="4" stroke-linejoin="round" />
+
                         <!-- Lock Icon inside shield -->
-                        <rect x="175" y="145" width="50" height="40" rx="5" fill="#e2e8f0"/>
-                        <path d="M 185 145 L 185 125 C 185 110, 215 110, 215 125 L 215 145" fill="none" stroke="#e2e8f0" stroke-width="6" stroke-linecap="round"/>
-                        <circle cx="200" cy="162" r="5" fill="#1e293b"/>
-                        <path d="M 200 167 L 200 178" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                        <rect x="175" y="145" width="50" height="40" rx="5" fill="#e2e8f0" />
+                        <path d="M 185 145 L 185 125 C 185 110, 215 110, 215 125 L 215 145" fill="none" stroke="#e2e8f0"
+                            stroke-width="6" stroke-linecap="round" />
+                        <circle cx="200" cy="162" r="5" fill="#1e293b" />
+                        <path d="M 200 167 L 200 178" stroke="#1e293b" stroke-width="3" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
@@ -287,36 +375,57 @@
                     <span class="section-tag">03. Gestion des Flux</span>
                     <h2 class="section-title">Contrôle d'Accès RFID & Biométrique</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        Oubliez les trousseaux de clés physiques volumineux et impossibles à tracer. Nous installons des solutions de contrôle d'accès intelligentes utilisant des cartes magnétiques, des badges RFID, ou la biométrie (empreinte, reconnaissance d'iris).
+                        Oubliez les trousseaux de clés physiques volumineux et impossibles à tracer. Nous installons des
+                        solutions de contrôle d'accès intelligentes utilisant des cartes magnétiques, des badges RFID,
+                        ou la biométrie (empreinte, reconnaissance d'iris).
                     </p>
                     <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                        Définissez précisément qui peut entrer dans chaque bureau ou bâtiment, déterminez des plages horaires d'autorisation, et consultez à tout moment l'historique complet des entrées et sorties pour prévenir toute tentative d'intrusion.
+                        Définissez précisément qui peut entrer dans chaque bureau ou bâtiment, déterminez des plages
+                        horaires d'autorisation, et consultez à tout moment l'historique complet des entrées et sorties
+                        pour prévenir toute tentative d'intrusion.
                     </p>
-                    
+
                     <div class="feature-list">
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Lecteurs d'empreintes digitales ultra-rapides</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Claviers à codes et lecteurs de badges RFID</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Verrouillage électromagnétique haute résistance</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Logiciel de centralisation et gestion des profils</span>
                         </div>
                     </div>
-                    
+
                     <a href="#" class="btn btn-primary devis-modal-trigger">Sécuriser mes accès</a>
                 </div>
                 <div>
                     <!-- Pure styled SVG illustration of a biometric keypad -->
-                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img" style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img"
+                        style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
                         <defs>
                             <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                                 <stop offset="0%" stop-color="#10b981" />
@@ -324,37 +433,47 @@
                             </linearGradient>
                         </defs>
                         <!-- Grid Background -->
-                        <path d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        <path d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        
+                        <path
+                            d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+                        <path
+                            d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+
                         <!-- Device Box -->
-                        <rect x="140" y="40" width="120" height="220" rx="15" fill="#334155" stroke="#475569" stroke-width="4"/>
-                        
+                        <rect x="140" y="40" width="120" height="220" rx="15" fill="#334155" stroke="#475569"
+                            stroke-width="4" />
+
                         <!-- LCD Screen -->
-                        <rect x="155" y="60" width="90" height="50" rx="5" fill="url(#screenGrad)"/>
+                        <rect x="155" y="60" width="90" height="50" rx="5" fill="url(#screenGrad)" />
                         <!-- Text placeholder on LCD Screen -->
-                        <text x="165" y="82" font-family="monospace" font-size="10" fill="#ffffff" font-weight="bold">ACCÈS AUTORISÉ</text>
+                        <text x="165" y="82" font-family="monospace" font-size="10" fill="#ffffff"
+                            font-weight="bold">ACCÈS AUTORISÉ</text>
                         <text x="165" y="96" font-family="monospace" font-size="9" fill="#a7f3d0">BIENVENU</text>
-                        
+
                         <!-- Keyboard Numeric Buttons Grid -->
-                        <circle cx="170" cy="135" r="8" fill="#e2e8f0"/>
-                        <circle cx="200" cy="135" r="8" fill="#e2e8f0"/>
-                        <circle cx="230" cy="135" r="8" fill="#e2e8f0"/>
-                        
-                        <circle cx="170" cy="160" r="8" fill="#e2e8f0"/>
-                        <circle cx="200" cy="160" r="8" fill="#e2e8f0"/>
-                        <circle cx="230" cy="160" r="8" fill="#e2e8f0"/>
-                        
-                        <circle cx="170" cy="185" r="8" fill="#e2e8f0"/>
-                        <circle cx="200" cy="185" r="8" fill="#e2e8f0"/>
-                        <circle cx="230" cy="185" r="8" fill="#e2e8f0"/>
-                        
+                        <circle cx="170" cy="135" r="8" fill="#e2e8f0" />
+                        <circle cx="200" cy="135" r="8" fill="#e2e8f0" />
+                        <circle cx="230" cy="135" r="8" fill="#e2e8f0" />
+
+                        <circle cx="170" cy="160" r="8" fill="#e2e8f0" />
+                        <circle cx="200" cy="160" r="8" fill="#e2e8f0" />
+                        <circle cx="230" cy="160" r="8" fill="#e2e8f0" />
+
+                        <circle cx="170" cy="185" r="8" fill="#e2e8f0" />
+                        <circle cx="200" cy="185" r="8" fill="#e2e8f0" />
+                        <circle cx="230" cy="185" r="8" fill="#e2e8f0" />
+
                         <!-- Biometric Scanner Window -->
-                        <rect x="175" y="210" width="50" height="35" rx="3" fill="#1e293b" stroke="#e2e8f0" stroke-width="2"/>
+                        <rect x="175" y="210" width="50" height="35" rx="3" fill="#1e293b" stroke="#e2e8f0"
+                            stroke-width="2" />
                         <!-- Fingerprint icon shape -->
-                        <path d="M 190 227 C 190 220, 210 220, 210 227 C 210 230, 205 233, 200 233 C 195 233, 190 230, 190 227 Z" fill="none" stroke="#10b981" stroke-width="2"/>
-                        <path d="M 195 232 C 195 228, 205 228, 205 232 C 205 235, 200 235, 200 235" fill="none" stroke="#10b981" stroke-width="2"/>
-                        <path d="M 197 220 L 203 220" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+                        <path
+                            d="M 190 227 C 190 220, 210 220, 210 227 C 210 230, 205 233, 200 233 C 195 233, 190 230, 190 227 Z"
+                            fill="none" stroke="#10b981" stroke-width="2" />
+                        <path d="M 195 232 C 195 228, 205 228, 205 232 C 205 235, 200 235, 200 235" fill="none"
+                            stroke="#10b981" stroke-width="2" />
+                        <path d="M 197 220 L 203 220" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
@@ -369,36 +488,57 @@
                     <span class="section-tag">04. Fiabilité Continu</span>
                     <h2 class="section-title">Maintenance Préventive & Corrective</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        Un système de sécurité n'est utile que s'il est 100% opérationnel au moment opportun. Nous proposons des contrats d'entretien périodiques comprenant la vérification des caméras, des câblages, le dépoussiérage des objectifs et les tests d'autonomie des batteries de secours.
+                        Un système de sécurité n'est utile que s'il est 100% opérationnel au moment opportun. Nous
+                        proposons des contrats d'entretien périodiques comprenant la vérification des caméras, des
+                        câblages, le dépoussiérage des objectifs et les tests d'autonomie des batteries de secours.
                     </p>
                     <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                        En cas de panne, notre service technique est mobilisé immédiatement. Selon votre niveau de contrat de maintenance, nous garantissons une intervention physique sous 4h ou 24h sur vos équipements défectueux.
+                        En cas de panne, notre service technique est mobilisé immédiatement. Selon votre niveau de
+                        contrat de maintenance, nous garantissons une intervention physique sous 4h ou 24h sur vos
+                        équipements défectueux.
                     </p>
-                    
+
                     <div class="feature-list">
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Visite technique préventive biannuelle</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Prêt de matériel en cas de panne lourde</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Mises à jour firmware logicielles incluses</span>
                         </div>
                         <div class="feature-list-item">
-                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span class="feature-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></span>
                             <span>Assistance téléphonique dédiée 24h/24</span>
                         </div>
                     </div>
-                    
+
                     <a href="#" class="btn btn-primary devis-modal-trigger">Demander un contrat de maintenance</a>
                 </div>
                 <div>
                     <!-- Pure styled SVG illustration of technical tools / cog / shield -->
-                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img" style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="service-detail-img"
+                        style="width: 100%; background: #0f172a; border-radius: var(--radius-md);">
                         <defs>
                             <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#fbbf24" />
@@ -406,28 +546,35 @@
                             </linearGradient>
                         </defs>
                         <!-- Grid Background -->
-                        <path d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        <path d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-                        
+                        <path
+                            d="M 0,30 L 400,30 M 0,60 L 400,60 M 0,90 L 400,90 M 0,120 L 400,120 M 0,150 L 400,150 M 0,180 L 400,180 M 0,210 L 400,210 M 0,240 L 400,240 M 0,270 L 400,270"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+                        <path
+                            d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300 M 320,0 L 320,300 M 360,0 L 360,300"
+                            fill="none" stroke="#1e293b" stroke-width="0.5" />
+
                         <!-- Big Cog Wheel -->
-                        <circle cx="200" cy="140" r="45" fill="none" stroke="#e2e8f0" stroke-width="16" stroke-dasharray="18,10"/>
-                        <circle cx="200" cy="140" r="45" fill="none" stroke="#e2e8f0" stroke-width="6"/>
-                        <circle cx="200" cy="140" r="15" fill="#0f172a" stroke="#e2e8f0" stroke-width="4"/>
-                        
+                        <circle cx="200" cy="140" r="45" fill="none" stroke="#e2e8f0" stroke-width="16"
+                            stroke-dasharray="18,10" />
+                        <circle cx="200" cy="140" r="45" fill="none" stroke="#e2e8f0" stroke-width="6" />
+                        <circle cx="200" cy="140" r="15" fill="#0f172a" stroke="#e2e8f0" stroke-width="4" />
+
                         <!-- Wrench -->
-                        <path d="M 120 220 L 170 170" stroke="url(#goldGrad)" stroke-width="14" stroke-linecap="round"/>
+                        <path d="M 120 220 L 170 170" stroke="url(#goldGrad)" stroke-width="14"
+                            stroke-linecap="round" />
                         <!-- Wrench head -->
-                        <circle cx="120" cy="220" r="18" fill="url(#goldGrad)"/>
-                        <circle cx="120" cy="220" r="8" fill="#0f172a"/>
+                        <circle cx="120" cy="220" r="18" fill="url(#goldGrad)" />
+                        <circle cx="120" cy="220" r="8" fill="#0f172a" />
                         <!-- cutout -->
-                        <rect x="112" y="210" width="16" height="25" fill="#0f172a" transform="rotate(45, 120, 220)"/>
-                        
+                        <rect x="112" y="210" width="16" height="25" fill="#0f172a" transform="rotate(45, 120, 220)" />
+
                         <!-- Screwdriver -->
-                        <path d="M 280 220 L 230 170" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M 280 220 L 230 170" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" />
                         <!-- Screwdriver handle -->
-                        <path d="M 280 220 L 310 250" stroke="#c9121f" stroke-width="18" stroke-linecap="round"/>
+                        <path d="M 280 220 L 310 250" stroke="#c9121f" stroke-width="18" stroke-linecap="round" />
                         <!-- tip -->
-                        <line x1="230" y1="170" x2="225" y2="165" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+                        <line x1="230" y1="170" x2="225" y2="165" stroke="#94a3b8" stroke-width="4"
+                            stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
@@ -439,20 +586,35 @@
         <div class="container footer-grid">
             <div class="footer-col-about">
                 <img src="assets/images/logo-light.png" alt="WTC Services Logo" class="logo-img">
-                <p class="footer-about-text">WTC Services est une entreprise spécialisée dans les solutions de sécurité électronique. Nous accompagnons les entreprises et les particuliers avec des systèmes fiables, innovants et adaptés à leurs besoins.</p>
+                <p class="footer-about-text">WTC Services est une entreprise spécialisée dans les solutions de sécurité
+                    électronique. Nous accompagnons les entreprises et les particuliers avec des systèmes fiables,
+                    innovants et adaptés à leurs besoins.</p>
                 <div class="social-links">
                     <a href="https://facebook.com" class="social-link" target="_blank" aria-label="Facebook">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
                     </a>
                     <a href="https://linkedin.com" class="social-link" target="_blank" aria-label="LinkedIn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
                     </a>
                     <a href="https://instagram.com" class="social-link" target="_blank" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
                     </a>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="footer-title">Navigation</h4>
                 <ul class="footer-links">
@@ -465,7 +627,7 @@
                     <li><a href="contact.html" class="footer-link">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div>
                 <h4 class="footer-title">Nos services</h4>
                 <ul class="footer-links">
@@ -476,27 +638,39 @@
                     <li><a href="solutions.html" class="footer-link">Solutions sur mesure</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-col-contact">
                 <h4 class="footer-title">Contact</h4>
                 <ul class="contact-info-list">
                     <li class="contact-info-item">
-                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
                         <span>655 852 060</span>
                     </li>
                     <li class="contact-info-item">
-                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span>raoul.ntonga@wtc-services.com</span>
+                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span>info@wtc-services.com</span>
                     </li>
                     <li class="contact-info-item">
-                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg class="contact-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
                         <span>Douala, Cameroun</span>
                     </li>
                 </ul>
                 <a href="#" class="footer-devis-link devis-modal-trigger">Demander un devis &rarr;</a>
             </div>
         </div>
-        
+
         <div class="container footer-bottom">
             <div>
                 &copy; 2025 WTC Services. Tous droits réservés.
@@ -514,7 +688,7 @@
             <button class="modal-close" id="modalClose" aria-label="Fermer la boîte de dialogue">&times;</button>
             <h3 class="modal-title">Demande de devis</h3>
             <p class="modal-desc">Obtenez une étude personnalisée et gratuite pour la sécurisation de vos locaux.</p>
-            
+
             <form id="devisForm">
                 <div class="form-row">
                     <div class="form-group">
@@ -526,18 +700,19 @@
                         <input class="form-control" type="text" id="devisEntreprise" placeholder="Ex: WTC SARL">
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label class="form-label" for="devisEmail">Email *</label>
-                        <input class="form-control" type="email" id="devisEmail" required placeholder="Ex: jean.dupont@mail.com">
+                        <input class="form-control" type="email" id="devisEmail" required
+                            placeholder="Ex: jean.dupont@mail.com">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="devisTel">Téléphone *</label>
                         <input class="form-control" type="tel" id="devisTel" required placeholder="Ex: 655 852 060">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="devisService">Service principal souhaité *</label>
                     <select class="form-control" id="devisService" required>
@@ -549,13 +724,15 @@
                         <option value="complet">Solution complète de sécurité</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="devisMsg">Description du projet (besoins, type de local...) *</label>
-                    <textarea class="form-control" id="devisMsg" rows="4" required placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
+                    <textarea class="form-control" id="devisMsg" rows="4" required
+                        placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
                 </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer la demande de devis</button>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer la demande
+                    de devis</button>
             </form>
         </div>
     </div>
@@ -563,4 +740,5 @@
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
