@@ -44,17 +44,12 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
-body {
-    font-family: var(--font-body);
-    color: var(--text-dark);
-    background-color: var(--light);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
 
 h1,
 h2,
@@ -372,15 +367,19 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 100%;
+    /* empêche tout débordement */
 }
 
 .products-collage {
     width: 100%;
+    max-width: 100%;
 }
 
 .products-collage img {
     width: 100%;
     height: auto;
+    /* ratio conservé automatiquement */
     max-height: 450px;
     object-fit: cover;
     border-radius: var(--radius-lg);
@@ -1374,7 +1373,7 @@ footer {
     }
 
     .products-collage img {
-        max-height: 320px;
+        max-height: 360px;
     }
 
     .section {
@@ -1425,20 +1424,35 @@ footer {
         position: fixed;
         top: 85px;
         left: -100%;
-        width: 100%;
+        width: 100vw;
+        /* exactement la largeur du viewport */
+        max-width: 100%;
+        /* jamais plus large */
         height: calc(100vh - 85px);
         background-color: var(--light);
         flex-direction: column;
         align-items: flex-start;
-        padding: 3rem 2rem;
-        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+        gap: 1.25rem;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        transition: var(--transition);
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-y: auto;
+        overflow-x: hidden;
+        /* bloque tout contenu interne qui déborderait */
+        z-index: 99;
     }
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-link,
+    .dropdown-item {
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        /* retour à la ligne si texte long */
+        word-break: break-word;
     }
 
     .dropdown-menu {
@@ -1448,9 +1462,12 @@ footer {
         visibility: visible;
         box-shadow: none;
         border: none;
-        padding-left: 1.5rem;
+        border-left: 2px solid var(--primary-light);
+        padding-left: 1rem;
+        margin-top: 0.5rem;
         display: none;
-        transition: none;
+        width: 100%;
+        background: transparent;
     }
 
     .nav-item-dropdown.active .dropdown-menu {
@@ -1503,11 +1520,15 @@ footer {
     }
 
     .hero-products {
-        /* supprimez la height fixe si elle existe */
+        order: -1;
+        width: 100%;
+        padding: 0;
+        /* supprime tout padding parasite */
     }
 
     .products-collage img {
-        max-height: 260px;
+        max-height: 280px;
+        border-radius: var(--radius-md);
     }
 
     /* --- Sections --- */
@@ -1686,7 +1707,7 @@ footer {
     .nav-menu {
         top: 70px;
         height: calc(100vh - 70px);
-        padding: 2rem 1.5rem;
+        padding: 1.75rem 1.25rem;
     }
 
     /* --- Hero --- */
