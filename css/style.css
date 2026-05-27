@@ -44,12 +44,17 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    overflow-x: hidden;
-    max-width: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
 h1,
 h2,
@@ -361,38 +366,37 @@ header {
 }
 
 /* Security Products Collage (Hero Right) */
-/* Security Products (Hero Right) */
+/* Dans la section Hero */
 .hero-products {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    /* Remplacez les hauteurs fixes */
+    min-height: 300px;
+    /* Hauteur minimale pour éviter un écrasement */
+    max-height: 50vh;
+    /* Limite à 50% de la hauteur de l'écran */
     width: 100%;
-    max-width: 100%;
-    /* empêche tout débordement */
+    margin-bottom: 2rem;
+    /* Espace entre l'image et le texte */
 }
 
 .products-collage {
+    height: 100%;
     width: 100%;
-    max-width: 100%;
-}
-
-.products-collage img {
-    width: 100%;
-    height: auto;
-    /* ratio conservé automatiquement */
-    max-height: 450px;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    display: block;
 }
 
 .collage-img {
-    position: absolute;
-    border-radius: var(--radius-md);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
+    width: 100% !important;
+    /* Force l'image à prendre toute la largeur */
+    height: auto !important;
+    object-fit: contain;
+    /* Conserve les proportions */
+    position: relative !important;
+    /* Désactive le positionnement absolu */
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
 }
 
 .collage-img:hover {
@@ -1364,16 +1368,12 @@ footer {
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 3rem;
     }
 
     .hero-products {
+        height: 350px;
         order: -1;
-        /* image passe EN HAUT sur tablette/mobile */
-    }
-
-    .products-collage img {
-        max-height: 360px;
     }
 
     .section {
@@ -1424,35 +1424,20 @@ footer {
         position: fixed;
         top: 85px;
         left: -100%;
-        width: 100vw;
-        /* exactement la largeur du viewport */
-        max-width: 100%;
-        /* jamais plus large */
+        width: 100%;
         height: calc(100vh - 85px);
         background-color: var(--light);
         flex-direction: column;
         align-items: flex-start;
-        padding: 2rem 1.5rem;
-        gap: 1.25rem;
+        padding: 3rem 2rem;
+        gap: 1.5rem;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: var(--transition);
         overflow-y: auto;
-        overflow-x: hidden;
-        /* bloque tout contenu interne qui déborderait */
-        z-index: 99;
     }
 
     .nav-menu.active {
         left: 0;
-    }
-
-    .nav-link,
-    .dropdown-item {
-        width: 100%;
-        max-width: 100%;
-        white-space: normal;
-        /* retour à la ligne si texte long */
-        word-break: break-word;
     }
 
     .dropdown-menu {
@@ -1462,12 +1447,9 @@ footer {
         visibility: visible;
         box-shadow: none;
         border: none;
-        border-left: 2px solid var(--primary-light);
-        padding-left: 1rem;
-        margin-top: 0.5rem;
+        padding-left: 1.5rem;
         display: none;
-        width: 100%;
-        background: transparent;
+        transition: none;
     }
 
     .nav-item-dropdown.active .dropdown-menu {
@@ -1519,17 +1501,6 @@ footer {
         gap: 1rem;
     }
 
-    .hero-products {
-        order: -1;
-        width: 100%;
-        padding: 0;
-        /* supprime tout padding parasite */
-    }
-
-    .products-collage img {
-        max-height: 280px;
-        border-radius: var(--radius-md);
-    }
 
     /* --- Sections --- */
     .section {
@@ -1684,6 +1655,54 @@ footer {
     .clients-section {
         padding: 3.5rem 0;
     }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        /* Une seule colonne */
+        gap: 2rem;
+        /* Espace entre l'image et le texte */
+    }
+
+
+    .hero-products {
+        height: auto !important;
+        min-height: 300px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content {
+        margin-top: 1rem;
+    }
+
+    .products-collage img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+    }
+
+    .collage-img {
+        position: relative !important;
+        width: 80% !important;
+        height: auto !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin-bottom: 1rem;
+        border-radius: var(--radius-md) !important;
+        box-shadow: var(--shadow-md) !important;
+    }
+
+    .products-collage {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
 /* ===== SMALL MOBILE (max-width: 576px) ===== */
@@ -1707,7 +1726,7 @@ footer {
     .nav-menu {
         top: 70px;
         height: calc(100vh - 70px);
-        padding: 1.75rem 1.25rem;
+        padding: 2rem 1.5rem;
     }
 
     /* --- Hero --- */
@@ -1735,10 +1754,6 @@ footer {
 
     .hero-products {
         height: 250px;
-    }
-
-    .products-collage img {
-        max-height: 220px;
     }
 
     .btn {
@@ -1990,10 +2005,6 @@ footer {
 
     .hero-products {
         height: 200px;
-    }
-
-    .products-collage img {
-        max-height: 180px;
     }
 
     .section-title {
