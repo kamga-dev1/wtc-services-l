@@ -1328,6 +1328,8 @@ footer {
 }
 
 /* --- RESPONSIVE STYLES --- */
+
+/* ===== TABLET LANDSCAPE (max-width: 1024px) ===== */
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 2.75rem;
@@ -1339,8 +1341,16 @@ footer {
     }
     
     .hero-products {
-        height: 380px;
+        height: 350px;
         order: -1;
+    }
+    
+    .section {
+        padding: 4.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
     }
     
     .footer-grid {
@@ -1351,9 +1361,33 @@ footer {
     .footer-col-contact {
         grid-column: span 3;
     }
+    
+    .about-grid {
+        gap: 3rem;
+    }
+    
+    .blog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .blog-single-title {
+        font-size: 2.5rem;
+    }
+    
+    .contact-grid {
+        gap: 3rem;
+    }
 }
 
+/* ===== TABLET PORTRAIT (max-width: 768px) ===== */
 @media (max-width: 768px) {
+    /* --- Navigation --- */
     .nav-menu {
         position: fixed;
         top: 85px;
@@ -1411,8 +1445,18 @@ footer {
         display: none;
     }
     
+    /* --- Hero Section --- */
+    .hero {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    
     .hero-title {
         font-size: 2.25rem;
+    }
+    
+    .hero-desc {
+        font-size: 1rem;
     }
     
     .hero-buttons {
@@ -1425,11 +1469,40 @@ footer {
         gap: 1rem;
     }
     
+    .hero-products {
+        height: 300px;
+    }
+    
+    /* --- Sections --- */
+    .section {
+        padding: 3.5rem 0;
+    }
+    
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    /* --- Services Grid --- */
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* --- Stats Section --- */
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
     
+    .stat-number {
+        font-size: 1.75rem;
+    }
+    
+    /* --- CTA Banner --- */
     .cta-container {
         flex-direction: column;
         text-align: center;
@@ -1439,6 +1512,11 @@ footer {
         flex-direction: column;
     }
     
+    .cta-text {
+        font-size: 1rem;
+    }
+    
+    /* --- Footer --- */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -1454,168 +1532,455 @@ footer {
         text-align: center;
     }
     
-    .about-grid, .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    /* --- Page Hero --- */
+    .page-hero {
+        padding: 3.5rem 0;
     }
     
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    /* --- About Page --- */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .about-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about-image-wrapper::after {
+        top: 10px;
+        left: 10px;
+    }
+    
+    /* --- Contact Page --- */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .contact-card-info {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .map-placeholder {
+        margin-top: 3rem;
+    }
+    
+    /* --- Blog --- */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .blog-single-title {
+        font-size: 2rem;
+    }
+    
+    .blog-single-content {
+        font-size: 1rem;
+    }
+    
+    /* --- Portfolio --- */
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* --- Filter Tabs --- */
+    .filter-tabs {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .filter-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* --- Form --- */
     .form-row {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
     
+    /* --- Modal --- */
     .modal-content {
         padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    /* --- Clients Section --- */
+    .clients-section {
+        padding: 3.5rem 0;
     }
 }
 
-@media (max-width: 480px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* --- TRANSMISSION MODAL FOR EMAIL/WHATSAPP --- */
-.transmission-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-    z-index: 2000; /* Ensure it is above everything else including normal modals */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.transmission-modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.transmission-card {
-    background-color: var(--light, #ffffff);
-    border-radius: var(--radius-lg, 16px);
-    box-shadow: var(--shadow-lg, 0 20px 40px rgba(0,0,0,0.15));
-    width: 90%;
-    max-width: 500px;
-    padding: 3rem 2.5rem;
-    position: relative;
-    text-align: center;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.transmission-modal-overlay.active .transmission-card {
-    transform: translateY(0);
-}
-
-.transmission-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    line-height: 1;
-    cursor: pointer;
-    color: var(--text-muted, #6b7280);
-    transition: var(--transition, all 0.3s);
-}
-
-.transmission-close:hover {
-    color: var(--primary, #c9121f);
-}
-
-.transmission-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #d1fae5;
-    color: #059669;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0 auto 1.5rem;
-}
-
-.transmission-title {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-size: 1.75rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    color: var(--text-dark, #1f2937);
-}
-
-.transmission-desc {
-    font-size: 0.95rem;
-    color: var(--text-muted, #6b7280);
-    margin-bottom: 2rem;
-    line-height: 1.5;
-}
-
-.transmission-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.transmission-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    border-radius: var(--radius-md, 8px);
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: var(--transition, all 0.3s);
-    cursor: pointer;
-}
-
-.btn-whatsapp {
-    background-color: #25d366;
-    color: #ffffff;
-}
-
-.btn-whatsapp:hover {
-    background-color: #128c7e;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-}
-
-.btn-email {
-    background-color: var(--primary, #c9121f);
-    color: #ffffff;
-}
-
-.btn-email:hover {
-    background-color: var(--primary-hover, #b00f1a);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(201, 18, 31, 0.3);
-}
-
-.transmission-note {
-    font-size: 0.8rem;
-    color: var(--text-muted, #9ca3af);
-    line-height: 1.4;
-}
-
+/* ===== SMALL MOBILE (max-width: 576px) ===== */
 @media (max-width: 576px) {
-    .transmission-card {
+    /* --- Container --- */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* --- Logo --- */
+    .logo-svg, .logo-img {
+        height: 40px;
+    }
+    
+    .nav-container {
+        height: 70px;
+    }
+    
+    .nav-menu {
+        top: 70px;
+        height: calc(100vh - 70px);
         padding: 2rem 1.5rem;
     }
+    
+    /* --- Hero --- */
+    .hero {
+        padding: 2.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.5px;
+    }
+    
+    .hero-tag {
+        font-size: 0.8rem;
+    }
+    
+    .hero-desc {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-buttons {
+        margin-bottom: 2.5rem;
+    }
+    
+    .hero-products {
+        height: 250px;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    /* --- Sections --- */
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-desc {
+        font-size: 0.9rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    /* --- Services Grid --- */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* --- Stats --- */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+    }
+    
+    /* --- Clients Section --- */
+    .clients-section {
+        padding: 3rem 0;
+    }
+    
+    .logo-item {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+    
+    .logo-item.bold {
+        font-size: 1.15rem;
+    }
+    
+    .logos-track {
+        gap: 2.5rem;
+    }
+    
+    /* --- CTA --- */
+    .cta-banner {
+        padding: 2rem 0;
+    }
+    
+    .cta-text {
+        font-size: 0.95rem;
+    }
+    
+    .cta-icon-wrapper {
+        width: 42px;
+        height: 42px;
+    }
+    
+    /* --- Footer --- */
+    footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-grid {
+        gap: 2rem;
+    }
+    
+    .footer-col-about .logo-svg,
+    .footer-col-about .logo-img {
+        height: 38px;
+    }
+    
+    .footer-title {
+        font-size: 1rem;
+    }
+    
+    /* --- Page Hero --- */
+    .page-hero {
+        padding: 2.5rem 0;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .breadcrumbs {
+        font-size: 0.8rem;
+    }
+    
+    /* --- About Page --- */
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .about-feat-card {
+        padding: 1.25rem;
+    }
+    
+    .about-image-wrapper::after {
+        display: none;
+    }
+    
+    /* --- Contact Page --- */
+    .contact-card-info {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .map-placeholder {
+        margin-top: 2.5rem;
+        min-height: auto;
+        padding: 1.5rem 1rem;
+    }
+    
+    .office-cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .office-card {
+        min-height: auto;
+        padding: 1.5rem 1.25rem;
+    }
+    
+    /* --- Portfolio --- */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .portfolio-img-wrapper {
+        height: 200px;
+    }
+    
+    /* --- Blog --- */
+    .blog-img-wrapper {
+        height: 180px;
+    }
+    
+    .blog-content {
+        padding: 1.5rem;
+    }
+    
+    .blog-title {
+        font-size: 1.15rem;
+    }
+    
+    .blog-single-title {
+        font-size: 1.6rem;
+    }
+    
+    .blog-single-meta {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .blog-single-content {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .blog-single-content h2 {
+        font-size: 1.35rem;
+    }
+    
+    /* --- Modal --- */
+    .modal-content {
+        padding: 1.75rem 1.25rem;
+        margin: 0 0.75rem;
+        max-height: 85vh;
+    }
+    
+    .modal-title {
+        font-size: 1.35rem;
+    }
+    
+    .modal-desc {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* --- Transmission Modal --- */
+    .transmission-card {
+        padding: 2rem 1.5rem;
+        width: 92%;
+    }
+    
     .transmission-title {
         font-size: 1.5rem;
     }
+    
+    .transmission-desc {
+        font-size: 0.85rem;
+    }
+    
+    .transmission-btn {
+        font-size: 0.9rem;
+        padding: 0.85rem;
+    }
+    
+    .transmission-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
 }
+
+/* ===== EXTRA SMALL MOBILE (max-width: 400px) ===== */
+@media (max-width: 400px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-products {
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 1.35rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+        text-align: left;
+    }
+    
+    .stat-icon {
+        margin-bottom: 0;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .blog-single-title {
+        font-size: 1.4rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .filter-tabs {
+        gap: 0.4rem;
+    }
+    
+    .filter-tab {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .highlight-text {
+        font-size: 0.8rem;
+    }
+    
+    .highlight-icon-wrapper {
+        width: 35px;
+        height: 35px;
+    }
+}
+
