@@ -1573,20 +1573,26 @@ footer {
     }
 
     .dropdown-menu {
-        position: static;
-        transform: none;
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
         opacity: 1;
         visibility: visible;
         box-shadow: none;
         border: none;
         width: 100%;
+        max-width: 100%;
         padding: 0;
         margin: 0;
         display: none;
         transition: none;
+        box-sizing: border-box;
     }
 
     .dropdown-menu .dropdown-item {
+        display: block;
+        width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
     }
