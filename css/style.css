@@ -1426,63 +1426,113 @@ footer {
     width: 100%;
     background-color: var(--light);
     position: relative;
-}
-
-.transmission-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 1.25rem;
-}
-
-.transmission-btn {
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    border-radius: var(--radius-sm);
-    border: none;
-    padding: 0.95rem 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: var(--transition);
-}
-
-.transmission-btn:hover {
-    transform: translateY(-1px);
-}
-
-.transmission-note {
-    margin-top: 1rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-/* --- RESPONSIVE STYLES --- */
-
-/* ===== TABLET LANDSCAPE (max-width: 1024px) ===== */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 2.75rem;
+        padding: 2rem 1.5rem;
+        box-sizing: border-box;
     }
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .transmission-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 34px;
+        height: 34px;
+        border: none;
+        background: rgba(15, 23, 42, 0.05);
+        color: var(--text-dark);
+        border-radius: 50%;
+        font-size: 1.2rem;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
     }
 
-    .hero-products {
-        min-height: 320px;
+    .transmission-close:hover {
+        background-color: rgba(201, 18, 31, 0.1);
+        color: var(--primary);
     }
 
-    .hero-content {
+    .transmission-icon {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(56, 189, 248, 0.12);
+        color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.25rem;
+        font-size: 1.75rem;
+    }
+
+    .transmission-title {
+        text-align: center;
+        margin-bottom: 0.75rem;
+        font-size: 1.75rem;
+    }
+
+    .transmission-desc {
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+    }
+
+    .transmission-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin-top: 1.5rem;
+    }
+
+    .transmission-btn {
         width: 100%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--light-border);
+        padding: 0.95rem 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        transition: var(--transition);
+        color: var(--dark);
+        background-color: var(--light);
     }
 
-    .hero-products {
-        height: 350px;
-        order: -1;
+    .transmission-btn:hover {
+        background-color: var(--light-bg);
+        transform: translateY(-1px);
+    }
+
+    .transmission-btn.btn-whatsapp {
+        background-color: #25d366;
+        border-color: #25d366;
+        color: #ffffff;
+    }
+
+    .transmission-btn.btn-whatsapp:hover {
+        background-color: #1ebe5d;
+        border-color: #1ebe5d;
+    }
+
+    .transmission-btn.btn-email {
+        background-color: #ffffff;
+        border-color: #dc2626;
+        color: #dc2626;
+    }
+
+    .transmission-btn.btn-email:hover {
+        background-color: #fee2e2;
+    }
+
+    .transmission-note {
+        margin-top: 1rem;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        text-align: center;
     }
 
     .section {
